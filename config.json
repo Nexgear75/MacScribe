@@ -1,0 +1,13 @@
+{
+  "transcription": {
+    "whisper_model": "large-v3-turbo"
+  },
+  "llm": {
+    "provider": "deepseek",
+    "model": "deepseek-chat"
+  },
+  "paths": {
+    "temp_folder": ".temp",
+    "output_folder": "./output/"
+  }
+}
