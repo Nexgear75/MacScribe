@@ -1,0 +1,13 @@
+{
+  "transcription": {
+    "whisper_model": "large-v3-turbo"
+  },
+  "llm": {
+    "provider": "Kimi",
+    "model": "k2.5"
+  },
+  "paths": {
+    "temp_folder": "./.temp/",
+    "output_folder": "./output/"
+  }
+}
