@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+openai-whisper
+litellm
+pydub
+dotenv
+yt-dlp
