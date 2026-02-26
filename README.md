@@ -34,14 +34,37 @@ Le projet est divisé en deux parties :
 
 ## Installation
 
-### 1. Cloner le projet
+### Option 1 : Démarrage rapide (recommandé)
+
+Le script `launch.js` automatise l'installation et le démarrage complet :
+
+```bash
+git clone <repository-url>
+cd macscribe-from-scratch
+
+# Lancer l'application (installation automatique)
+node scripts/launch.js
+```
+
+Le script s'occupe de tout :
+- Vérification de Python 3
+- Création du virtualenv
+- Installation des dépendances Python
+- Vérification du fichier `.env`
+- Démarrage du backend
+- Compilation du CLI
+- Lancement de l'interface interactive
+
+### Option 2 : Installation manuelle
+
+#### 1. Cloner le projet
 
 ```bash
 git clone <repository-url>
 cd macscribe-from-scratch
 ```
 
-### 2. Installer le backend (Python)
+#### 2. Installer le backend (Python)
 
 ```bash
 cd backend
@@ -50,7 +73,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configurer les variables d'environnement
+#### 3. Configurer les variables d'environnement
 
 Créez un fichier `.env` dans le dossier `backend/` :
 
@@ -61,7 +84,7 @@ DEEPSEEK_API_KEY=votre_cle_api_deepseek
 EOL
 ```
 
-### 4. Installer le CLI (Node.js)
+#### 4. Installer le CLI (Node.js)
 
 ```bash
 cd cli
@@ -99,7 +122,17 @@ Le fichier `cli/config.json` contient la configuration de l'application :
 
 ## Utilisation
 
-### Démarrer le backend
+### Option 1 : Démarrage rapide (via `launch.js`)
+
+```bash
+node scripts/launch.js
+```
+
+Le script démarre automatiquement le backend, compile le CLI si nécessaire, et lance l'interface interactive. Pressez `Ctrl+C` pour arrêter proprement tout le processus.
+
+### Option 2 : Démarrage manuel
+
+#### Démarrer le backend
 
 ```bash
 cd backend
@@ -114,7 +147,7 @@ Vérifier que le serveur est opérationnel :
 curl http://localhost:8000/health
 ```
 
-### Utiliser le CLI
+#### Utiliser le CLI
 
 Dans un autre terminal :
 
