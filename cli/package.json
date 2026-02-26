@@ -9,6 +9,7 @@
 	},
 	"scripts": {
 		"build": "tsc",
+		"start": "cd .. && npm start",
 		"dev": "tsc --watch",
 		"test": "prettier --check . && xo && ava",
 		"cli": "tsc && node ./dist/source/cli.js"

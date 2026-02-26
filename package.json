@@ -1,0 +1,30 @@
+{
+  "name": "macscribe",
+  "version": "0.1.0",
+  "description": "Application de transcription audio pour Mac avec interface CLI",
+  "type": "module",
+  "bin": {
+    "macscribe": "./scripts/launch.js"
+  },
+  "scripts": {
+    "start": "node ./scripts/launch.js",
+    "cli": "cd cli && npm run cli",
+    "build": "cd cli && npm run build",
+    "dev": "cd cli && npm run dev",
+    "test": "cd cli && npm test",
+    "install:all": "npm install && cd cli && npm install && cd cli && npm run build && cd ../backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
+    "setup": "npm run install:all"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "transcription",
+    "whisper",
+    "mac",
+    "cli",
+    "audio"
+  ],
+  "author": "",
+  "license": "MIT"
+}
